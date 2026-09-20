@@ -12,6 +12,7 @@ A rule that parses is not a rule that works. It can miss the case it was written
 | [.NET runtime loaded by a process that is not a .NET host](rules/win_sysmon_unmanaged_powershell_clr_load.yml) | T1059.001, T1055 | Sysmon event 7 | Unmanaged PowerShell: PowerShell with no `powershell.exe` in the process log |
 | [SSH password brute force from one source](rules/lnx_sshd_failed_password.yml) | T1110.001 | sshd auth log | Sigma correlation rule, ported from [blue-team-ai](https://github.com/aaronsawit/blue-team-ai) |
 | [Client bypassing the filtering resolver with encrypted DNS](rules/dns_encrypted_dns_bypass_of_filtering_resolver.yml) | T1071.004, T1572 | DNS query log | One phone on my own network went silent in the resolver log. It was iCloud Private Relay. |
+| [Systemd unit written outside a package manager](rules/lnx_file_event_systemd_unit_written_outside_package_manager.yml) | T1543.002, T1053.006 | Linux file events (Sysmon for Linux, auditd) | I write service and timer units by hand on my own server, so I know what normal looks like: rare, and always an editor or a shell |
 
 ## Run the checks
 
